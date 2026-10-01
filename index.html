@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
     <meta name="description" content="Crie layouts de cartelas de bingo, exporte em PDF e imprima.">
     <meta name="keywords" content="Bingo Maker, bingo, cartelas de bingo, PDF, impressão">
     <meta name="author" content="Helder dos Santos Sousa">
@@ -31,9 +32,22 @@
         </section>
 
         <div class="product-preview" aria-label="Prévia do Bingo Maker">
-            <img class="product-preview__mockup" src="assets/images/MOKUP.png" alt="Bingo Maker apresentado em um mockup de tela" width="1536" height="1024">
-            <img class="product-preview__screen" src="assets/images/PÁGINA DO SISTEMA.png" alt="Tela do Bingo Maker em funcionamento" width="1917" height="1016" loading="lazy">
+            <button class="product-preview__trigger product-preview__mockup" type="button" aria-label="Ampliar mockup do Bingo Maker">
+                <img src="assets/images/MOKUP.png" alt="Bingo Maker apresentado em um mockup de tela" width="1536" height="1024">
+            </button>
+            <button class="product-preview__trigger product-preview__screen" type="button" aria-label="Ampliar captura da tela do Bingo Maker">
+                <img src="assets/images/PÁGINA DO SISTEMA.png" alt="Tela principal do Bingo Maker em funcionamento" width="1917" height="1016" loading="lazy">
+            </button>
         </div>
     </main>
+
+    <dialog class="image-modal" aria-label="Visualização ampliada da tela do Bingo Maker">
+        <button class="image-modal__close" type="button" aria-label="Fechar visualização">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <img class="image-modal__image" alt="">
+    </dialog>
 </body>
 </html>
